@@ -78,6 +78,9 @@
       <groupId>ltd.colingting</groupId>
       <artifactId>ddd-demo-infrastructure</artifactId>
     </dependency>
-
+    <dependency>
+      <groupId>ltd.colingting</groupId>
+      <artifactId>ddd-demo-external</artifactId>
+    </dependency>
   </dependencies>
 </project>

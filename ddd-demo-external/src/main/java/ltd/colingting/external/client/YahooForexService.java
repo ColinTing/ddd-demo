@@ -2,20 +2,17 @@ package ltd.colingting.external.client;
 
 
 import java.math.BigDecimal;
+import ltd.colingting.external.client.fallback.YahooForexFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * Copyright © 2022 ChinaMobile Info. Tech Ltd. All rights reserved.
- * <p>
- * 文件远端请求
- *
- * @author <a href="19802021461@139.com">ZhiFeng.Wu</a>
+ * @author 丁浩
  * @date 2022/7/25 10:13
  */
-@FeignClient(name = "${hcy.feignclient.demo.service-name}", path = "${hcy.feignclient.demo.context-path}")
+@FeignClient(name = "yahoo-forex", fallback = YahooForexFallback.class)
 public interface YahooForexService {
 
 

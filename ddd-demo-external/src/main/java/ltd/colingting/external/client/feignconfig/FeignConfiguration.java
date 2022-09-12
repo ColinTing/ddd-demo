@@ -17,10 +17,7 @@ import org.springframework.cloud.openfeign.ribbon.LoadBalancerFeignClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 /**
- * Copyright © 2022 ChinaMobile Info. Tech Ltd. All rights reserved.
- * <P>
- * feign请求配置初始化
- * @author: <a href="19802021461@139.com">ZhiFeng.Wu</a>
+ * @author: 丁浩
  * @date: 2022/7/15 8:52
  */
 @Slf4j
