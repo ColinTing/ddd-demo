@@ -4,6 +4,7 @@ package ltd.colingting.infrastructure.repository.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import java.util.List;
 import java.util.stream.Collectors;
+import lombok.RequiredArgsConstructor;
 import ltd.colingting.domain.domain.dto.OrderQuery;
 import ltd.colingting.domain.domain.entity.LineItem;
 import ltd.colingting.domain.domain.entity.Order;
@@ -23,7 +24,6 @@ import ltd.colingting.types.repository.snapshot.ListDiff;
 import ltd.colingting.types.types.OrderId;
 import ltd.colingting.types.types.StoreId;
 import org.jetbrains.annotations.NotNull;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -31,25 +31,26 @@ import org.springframework.stereotype.Repository;
  * @date 2022年09月01日 10:39
  */
 @Repository
+@RequiredArgsConstructor
 public class OrderRepositoryImpl extends DbRepositorySupport<Order, OrderId> implements OrderRepository {
 
-    @Autowired
-    private OrderMapper orderDAO;
 
-    @Autowired
-    private LineItemMapper lineItemDAO;
+    private final OrderMapper orderDAO;
+
+
+    private final LineItemMapper lineItemDAO;
 
 //    private final Cache cache;
 
-    @Autowired
-    private  OrderAssembler orderAssembler;
 
-    @Autowired
-    private  LineItemAssembler lineAssembler;
+    private final OrderAssembler orderAssembler;
 
-    protected OrderRepositoryImpl(Class<Order> targetClass) {
-        super(targetClass);
-    }
+
+    private final LineItemAssembler lineAssembler;
+
+//    protected OrderRepositoryImpl(Class<Order> targetClass) {
+//        super(targetClass);
+//    }
 
 
     @Override

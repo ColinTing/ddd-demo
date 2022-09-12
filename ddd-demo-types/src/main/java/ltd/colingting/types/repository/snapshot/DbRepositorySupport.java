@@ -2,6 +2,7 @@ package ltd.colingting.types.repository.snapshot;
 
 import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import ltd.colingting.types.repository.Aggregate;
 import ltd.colingting.types.repository.Identifier;
 import ltd.colingting.types.repository.Repository;
@@ -12,11 +13,12 @@ import org.jetbrains.annotations.NotNull;
  * @date 2022年09月03日 21:36
  */
 // 这个类是一个通用的支撑类，为了减少开发者的重复劳动。在用的时候需要继承这个类
+@NoArgsConstructor
 public abstract class DbRepositorySupport<T extends Aggregate<ID>, ID extends Identifier> implements
     Repository<T, ID> {
 
     @Getter
-    private final Class<T> targetClass;
+    private  Class<T> targetClass;
 
     // 让AggregateManager去维护Snapshot
     @Getter(AccessLevel.PROTECTED)
