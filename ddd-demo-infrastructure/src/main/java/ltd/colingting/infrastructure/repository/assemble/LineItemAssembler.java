@@ -5,16 +5,14 @@ import ltd.colingting.infrastructure.persistence.po.LineItemPO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-import org.mapstruct.factory.Mappers;
 
 /**
  * @author 丁浩
  * @date 2022年09月03日 20:22
  */
-@Mapper
+@Mapper(componentModel = "spring")
 public interface LineItemAssembler {
 
-    LineItemAssembler INSTANCE = Mappers.getMapper(LineItemAssembler.class);
 
     @Mappings({
         @Mapping(target = "id", source = "id.id"),

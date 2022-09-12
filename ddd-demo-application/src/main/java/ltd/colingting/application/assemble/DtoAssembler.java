@@ -7,16 +7,14 @@ import ltd.colingting.domain.domain.entity.Order;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-import org.mapstruct.factory.Mappers;
 
 /**
  * @author 丁浩
  * @date 2022年09月01日 11:21
  */
-@Mapper
+@Mapper(componentModel = "spring")
 public interface DtoAssembler {
 
-    DtoAssembler INSTANCE = Mappers.getMapper(DtoAssembler.class);
 
     // 通过各种实体，生成DTO
     @Mappings({
