@@ -1,0 +1,23 @@
+package ltd.colingting.application.service;
+
+import java.util.Map;
+import ltd.colingting.infrastructure.datahelper.vo.Result;
+
+/**
+ * @author 丁浩
+ * @date 2022年09月15日 14:21
+ */
+
+public interface CardService {
+
+    // 1）统一接口，参数膨胀
+    Result openCard(int petType, int babyAge);
+
+    // 2）统一泛化接口，参数语意丢失
+    Result openCardV2(Map<String, Object> params);
+
+    // 3）不泛化，同一个类里的接口膨胀
+    Result openPetCard(int petType);
+    Result openBabyCard(int babyAge);
+
+}

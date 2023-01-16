@@ -1,0 +1,18 @@
+package ltd.colingting.application.service.impl;
+
+import ltd.colingting.application.service.ItemService;
+import ltd.colingting.infrastructure.persistence.po.ItemDetailPO;
+import org.springframework.stereotype.Service;
+
+/**
+ * @author 丁浩
+ * @date 2022年09月16日 10:54
+ */
+@Service
+public class ItemServiceImpl implements ItemService {
+
+    @Override
+    public ItemDetailPO getItem(Long itemId) {
+        return null;
+    }
+}

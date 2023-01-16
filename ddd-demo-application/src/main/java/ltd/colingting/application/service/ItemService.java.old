@@ -1,0 +1,13 @@
+package ltd.colingting.application.service;
+
+import ltd.colingting.infrastructure.persistence.po.ItemDetailPO;
+
+/**
+ * @author 丁浩
+ * @date 2022年09月16日 10:54
+ */
+
+public interface ItemService {
+
+    ItemDetailPO getItem(Long itemId);
+}
