@@ -1,0 +1,117 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.2.5.RELEASE</version>
+    <relativePath/>
+  </parent>
+
+  <groupId>ltd.colingting</groupId>
+  <artifactId>ddd-demo</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>ddd-demo-domain</module>
+    <module>ddd-demo-infrastructure</module>
+    <module>ddd-demo-application</module>
+    <module>ddd-demo-web</module>
+    <module>ddd-demo-types</module>
+    <module>ddd-demo-external</module>
+  </modules>
+  <packaging>pom</packaging>
+
+  <name>ddd-demo</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.version>1.0-SNAPSHOT</project.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring.version>5.2.9.RELEASE</spring.version>
+    <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
+    <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-framework-bom</artifactId>
+        <version>${spring.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+        <version>${spring-cloud-alibaba.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>ltd.colingting</groupId>
+        <artifactId>ddd-demo-web</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>ltd.colingting</groupId>
+        <artifactId>ddd-demo-application</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>ltd.colingting</groupId>
+        <artifactId>ddd-demo-domain</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>ltd.colingting</groupId>
+        <artifactId>ddd-demo-infrastructure</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>ltd.colingting</groupId>
+        <artifactId>ddd-demo-external</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>3.22.0</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>

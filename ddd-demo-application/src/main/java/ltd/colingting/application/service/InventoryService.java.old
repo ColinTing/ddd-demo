@@ -1,0 +1,11 @@
+package ltd.colingting.application.service;
+
+/**
+ * @author 丁浩
+ * @date 2022年09月16日 11:07
+ */
+
+public interface InventoryService {
+
+    boolean withhold(Long itemId, Integer quantity);
+}

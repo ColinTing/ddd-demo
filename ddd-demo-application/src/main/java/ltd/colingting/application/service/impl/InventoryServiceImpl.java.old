@@ -1,0 +1,16 @@
+package ltd.colingting.application.service.impl;
+
+import ltd.colingting.application.service.InventoryService;
+
+/**
+ * @author 丁浩
+ * @date 2022年09月16日 11:08
+ */
+
+public class InventoryServiceImpl implements InventoryService {
+
+    @Override
+    public boolean withhold(Long itemId, Integer quantity) {
+        return false;
+    }
+}
