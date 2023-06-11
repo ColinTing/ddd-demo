@@ -2,8 +2,6 @@ package ltd.colingting;
 
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.UUID;
 import lombok.extern.slf4j.Slf4j;
 import ltd.colingting.domain.domain.entity.Order;
 import ltd.colingting.domain.repository.OrderRepository;
@@ -33,14 +31,12 @@ public class AppTest {
 
     @Test
     public void multiInsert() {
-        System.out.println(UUID.randomUUID().toString());
-
         OrderPO dao = new OrderPO();
 
         Order order = new Order();
         order.setUserId(new UserId(11L));
         order.setStatus(OrderState.ENABLED);
-        order.setLineItems(new ArrayList<>());
+        ;
         order.addLineItem(new ItemId(13L), new Quantity(5), new Money(BigDecimal.valueOf(4),new Currency("CNY")));
         order.addLineItem(new ItemId(14L), new Quantity(2), new Money(BigDecimal.valueOf(3),new Currency("CNY")));
 

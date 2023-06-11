@@ -14,7 +14,6 @@ import org.mapstruct.Mappings;
 public interface OrderAssembler {
 
 
-
     @Mappings({
         @Mapping(target = "id.id", source = "id"),
         @Mapping(target = "address.detail", source = "addressDetail")

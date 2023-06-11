@@ -18,7 +18,7 @@ public abstract class DbRepositorySupport<T extends Aggregate<ID>, ID extends Id
     Repository<T, ID> {
 
     @Getter
-    private Class<T> targetClass;
+    private  Class<T> targetClass;
 
     // 让AggregateManager去维护Snapshot
     @Getter(AccessLevel.PROTECTED)

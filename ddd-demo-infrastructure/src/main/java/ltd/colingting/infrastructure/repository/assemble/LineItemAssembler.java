@@ -14,7 +14,6 @@ import org.mapstruct.Mappings;
 public interface LineItemAssembler {
 
 
-
     @Mappings({
         @Mapping(target = "id", source = "id.id"),
         @Mapping(target = "orderId", source = "orderId.id"),

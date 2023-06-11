@@ -20,29 +20,6 @@
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
 
   <dependencies>
     <dependency>
@@ -79,6 +56,10 @@
       <artifactId>ddd-demo-infrastructure</artifactId>
     </dependency>
     <dependency>
+      <groupId>ltd.colingting</groupId>
+      <artifactId>ddd-demo-external</artifactId>
+    </dependency>
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <scope>test</scope>
@@ -87,10 +68,6 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>ltd.colingting</groupId>
-      <artifactId>ddd-demo-external</artifactId>
     </dependency>
 
   </dependencies>

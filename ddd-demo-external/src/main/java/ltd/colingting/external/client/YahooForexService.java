@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * 文件远端请求
- *
  * @author 丁浩
  * @date 2022/7/25 10:13
  */

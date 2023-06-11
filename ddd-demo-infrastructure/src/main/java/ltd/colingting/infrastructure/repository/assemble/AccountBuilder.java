@@ -14,7 +14,6 @@ import org.mapstruct.Mappings;
 public interface AccountBuilder {
 
 
-
     @Mappings({
         @Mapping(target = "id.value", source = "id"),
         @Mapping(target = "accountNumber.value", source = "accountNumber"),

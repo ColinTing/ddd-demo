@@ -17,9 +17,7 @@ public class AuditMessageProducerImpl implements AuditMessageProducer {
     private static final String TOPIC_AUDIT_LOG = "TOPIC_AUDIT_LOG";
 
 
-
     private final KafkaTemplate<String, String> kafkaTemplate;
-
 
     @Override
     public void send(AuditMessage message) {

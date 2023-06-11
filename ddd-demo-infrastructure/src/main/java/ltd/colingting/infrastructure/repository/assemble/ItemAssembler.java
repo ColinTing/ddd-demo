@@ -15,7 +15,6 @@ public interface ItemAssembler {
 
 
 
-
     @Mappings({
         @Mapping(target = "id", source = "itemId")
     })

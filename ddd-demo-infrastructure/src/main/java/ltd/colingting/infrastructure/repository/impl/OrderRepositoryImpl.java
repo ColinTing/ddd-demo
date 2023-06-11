@@ -35,7 +35,7 @@ import org.springframework.stereotype.Repository;
 public class OrderRepositoryImpl extends DbRepositorySupport<Order, OrderId> implements OrderRepository {
 
 
-    private  final OrderMapper orderDAO;
+    private final OrderMapper orderDAO;
 
 
     private final LineItemMapper lineItemDAO;
@@ -43,15 +43,14 @@ public class OrderRepositoryImpl extends DbRepositorySupport<Order, OrderId> imp
 //    private final Cache cache;
 
 
-    private final  OrderAssembler orderAssembler;
+    private final OrderAssembler orderAssembler;
 
 
-    private final  LineItemAssembler lineAssembler;
+    private final LineItemAssembler lineAssembler;
 
 //    protected OrderRepositoryImpl(Class<Order> targetClass) {
 //        super(targetClass);
 //    }
-
 
 
     @Override
@@ -77,15 +76,13 @@ public class OrderRepositoryImpl extends DbRepositorySupport<Order, OrderId> imp
             for (Diff itemDiff : diffList) {
                 if (itemDiff.getType() == DiffType.Removed) {
                     LineItem line = (LineItem) itemDiff.getOldValue();
-                    //子实体不能有独立的Repository，不可以单独保存和取出，必须要通过聚合根的Repository实例化
-                    //TODO 这里的LineItemPO 要替换成 OrderPO
-//                    LineItemPO lineDO = lineAssembler.fromLineItem(line);
-//                    lineItemDAO.deleteById(lineDO.getId());
+                    LineItemPO lineDO = lineAssembler.fromLineItem(line);
+                    lineItemDAO.deleteById(lineDO.getId());
                 }
                 if (itemDiff.getType() == DiffType.Added) {
                     LineItem line = (LineItem) itemDiff.getNewValue();
-//                    LineItemPO lineDO = lineAssembler.fromLineItem(line);
-//                    lineItemDAO.insert(lineDO);
+                    LineItemPO lineDO = lineAssembler.fromLineItem(line);
+                    lineItemDAO.insert(lineDO);
                 }
                 if (itemDiff.getType() == DiffType.Modified) {
                     LineItem line = (LineItem) itemDiff.getNewValue();
