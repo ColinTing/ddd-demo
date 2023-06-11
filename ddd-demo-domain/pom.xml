@@ -28,7 +28,6 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.10</version>
     </dependency>
     <dependency>
       <groupId>org.mapstruct</groupId>
@@ -56,6 +55,16 @@
       <artifactId>mybatis-plus-extension</artifactId>
       <version>3.4.2</version>
       <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <scope>test</scope>
     </dependency>
 
 
