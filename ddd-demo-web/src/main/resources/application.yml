@@ -3,6 +3,9 @@ server:
   http2:
     enabled: true
 spring:
+  config:
+    import:
+      - nacos:ddd-demo.yaml?group=LOCAL_TEST
   application:
     name: ddd-demo
   cloud:
