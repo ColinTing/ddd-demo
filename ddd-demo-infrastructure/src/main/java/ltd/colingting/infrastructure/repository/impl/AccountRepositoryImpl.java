@@ -9,13 +9,13 @@ import ltd.colingting.infrastructure.repository.assemble.AccountBuilder;
 import ltd.colingting.types.types.AccountId;
 import ltd.colingting.types.types.AccountNumber;
 import ltd.colingting.types.types.UserId;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 /**
  * @author 丁浩
  * @date 2022年08月17日 14:36
  */
-@Repository
+@Service
 @RequiredArgsConstructor
 public class AccountRepositoryImpl implements AccountRepository {
 

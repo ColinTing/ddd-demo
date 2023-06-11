@@ -5,6 +5,7 @@ import ltd.colingting.infrastructure.persistence.po.AccountPO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
+import org.mapstruct.factory.Mappers;
 
 /**
  * @author 丁浩
@@ -13,7 +14,7 @@ import org.mapstruct.Mappings;
 @Mapper(componentModel = "spring")
 public interface AccountBuilder {
 
-
+    AccountBuilder INSTANCE = Mappers.getMapper(AccountBuilder.class);
 
     @Mappings({
         @Mapping(target = "id.value", source = "id"),
